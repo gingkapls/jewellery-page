@@ -207,6 +207,10 @@ img.jewellery {
     margin: 0;
 }
 
+blockquote {
+    color: rgb(var(--text-fg) / .8);
+}
+
 blockquote::before {
     content: '\201C';
 }
