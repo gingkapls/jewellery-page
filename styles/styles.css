@@ -11,6 +11,7 @@
 
 * {
     box-sizing: border-box;
+    border-collapse: collapse;
 }
 
 /* Fixing weird image margin behaviour */
@@ -119,8 +120,13 @@ body {
 
 h2.title {
     margin: 120px 16px 10px 16px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-style: italic;
     text-transform: uppercase;
+}
+
+h2.title.right {
+    text-align: right;
 }
 
 .section {
@@ -136,7 +142,6 @@ h2.title {
 }
 
 .model img {
-    max-width: 350px;
     padding: 0;
     margin: 0;
 }
@@ -168,7 +173,22 @@ h2.title {
     padding: 8px 32px;
 }
 
-.jewelery-container {
+img.jewellery {
+    padding: 0;
+    margin: 0;
+}
+
+blockquote::before {
+    content: '\201C';
+}
+  
+blockquote::after {
+    content: '\201D';
+}
+  
+
+
+.jewellery-container {
     display: flex;
     flex: 0.5 auto;
     align-items: center;
@@ -176,11 +196,7 @@ h2.title {
     border: 1px solid grey;
 }
 
-img#rings {
-    max-width: 400px;
-}
-
-.jewelery-container .discover {
+.jewellery-container .discover {
     padding: 8px 32px;
     border: 2px solid rgb(var(--text-fg) / .45);
     font-weight: 600;
