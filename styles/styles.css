@@ -11,7 +11,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
 }
 
 * {
@@ -57,7 +57,7 @@ body {
     right: 45%;
 }
 
-.navbar a {
+a {
   color: rgb(var(--text-fg) / 0.6);
   background: rgb(var(--main));
   text-align: center;
@@ -116,6 +116,10 @@ body {
     color: rgb(var(--main));
     padding: 10px 40px;
     border-radius: 24px;
+    transition: 500ms ease-in-out box-shadow;
+}
+
+#hero-btn:hover {
     box-shadow: 2px 2px 20px 5px rgba(var(--dark-orange) / .2);
 }
 
@@ -150,6 +154,18 @@ h2.title.right {
 .model img {
     padding: 0;
     margin: 0;
+}
+
+.card-container {
+    transition: 1000ms ease-in-out transform;
+}
+
+.card-container.right:hover {
+    transform: perspective(1800px) rotateY(20deg) translateX(100px) scale(0.9);
+}
+
+.card-container:hover {
+    transform: perspective(1800px) rotateY(-20deg) translateX(-100px) scale(0.9);
 }
 
 .caption-card {
@@ -207,4 +223,57 @@ blockquote::after {
     color: rgb(var(--text-fg) / .7);
     border-radius: 24px;
     font-size: 2rem;
+    transition: 300ms ease-in-out background-color, 300ms ease-in-out color;
+}
+
+.discover:hover {
+    background-color: rgb(var(--text-fg) / .8);
+    color: rgb(var(--main) / .9);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(var(--text-fg) / .05);
+    color: rgb(var(--text-fg));
+    list-style: none;
+    padding: 20px;
+    gap: 20px;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer > .links > .left {
+    display: flex;
+}
+
+.footer > .links > .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer h4, .footer li {
+    margin: 10px 20px;
+}
+
+.footer a {
+    margin: 0 -8px;
+    color: rgb(var(--text-fg));
+    background-color: rgba(0 0 0 / 0);
+}
+
+.footer img {
+    filter: grayscale();
+    padding: 0 4px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
