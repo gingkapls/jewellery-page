@@ -9,6 +9,11 @@
     font-size: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
 * {
     box-sizing: border-box;
     border-collapse: collapse;
@@ -120,6 +125,7 @@ body {
 
 h2.title {
     margin: 120px 16px 10px 16px;
+    scroll-snap-align: start;
     font-size: 2.5rem;
     font-style: italic;
     text-transform: uppercase;
@@ -186,8 +192,6 @@ blockquote::after {
     content: '\201D';
 }
   
-
-
 .jewellery-container {
     display: flex;
     flex: 0.5 auto;
